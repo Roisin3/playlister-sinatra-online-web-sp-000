@@ -9,5 +9,9 @@
   <label for="artist_name">Artist Name</label>
   <input type="text" name='artist[name]' id='artist_name' value="<%= artist.name %>">
 
+  <% Genre.all.each do |genre| %>
+  <label><%= genre.name %></label>
+  <input type='text' name='genres[]' id='<%= genre.name %>' value='<%= genre.id %>'>
+
   <input type='submit' value='Save'>
 </form>
